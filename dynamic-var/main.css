@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--bg-color: #0ebff5;
+}
+
+body {
+	overflow: hidden;
+	background-color: var(--bg-color);
+}
+
+.main {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.main__body input {
+	background-color: var(--bg-color);
+}

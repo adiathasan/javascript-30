@@ -1,0 +1,12 @@
+#wheel {
+	animation: wheel 0.5s ease-in 0 infinite;
+}
+
+@keyframes wheel {
+	from {
+		transform: translateZ(0deg);
+	}
+	to {
+		transform: translateZ(360deg);
+	}
+}

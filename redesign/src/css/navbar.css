@@ -1,56 +1,98 @@
 .nav {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
+	align-items: center;
 	background-color: #242526;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	padding: 0.1rem 3rem;
 	border-bottom: 1px solid #393a3b;
-	z-index: 100;
+	padding: 0 2rem;
+	height: 10vh;
 }
 
 .nav__logo {
-	flex: 3;
+	margin-top: -0.5rem;
+	letter-spacing: 0.3rem;
+	color: #05c7c7;
+	flex: 1;
 	text-transform: uppercase;
-}
-
-.nav__logo h1 {
-	color: #00a2ff;
-	font-weight: 500;
-	font-size: 1.7rem;
 }
 
 .nav__right {
 	flex: 1;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	gap: 0.3rem;
+	justify-content: flex-end;
+	gap: 0.2rem;
 }
 
-.nav__right a {
-	flex: 1;
-	text-align: center;
-	padding: 1rem 0;
-	transition: 0.3s ease-in all;
+.nav__right > * {
+	padding: 1rem;
+	border-radius: 6px;
+	transition: 0.3s ease-in;
+}
+
+.nav__right > *:hover {
+	background-color: #393a3b;
+}
+
+.burger {
+	display: none;
+	cursor: pointer;
+	padding: 1rem;
 	border-radius: 10px;
+	transition: 0.3s ease-in;
 }
 
-.nav__right a:hover {
-	background-color: #6f717248;
+.burger:hover {
+	background-color: #393a3b;
 }
 
-/* @media (max-width: 1000px) {
+.burger div {
+	width: 30px;
+	height: 3px;
+	background-color: white;
+	margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+	.nav {
+		padding: 0 2rem;
+	}
 	.nav__right {
-		flex: 2;
+		background-color: #242526;
+		position: absolute;
+		right: 0;
+		height: 90vh;
+		top: 10vh;
+		flex-direction: column;
+		justify-content: space-evenly;
+		width: 50%;
+		transform: translateX(100%);
+		opacity: 0;
+		transition: 0.5s ease-in all;
+	}
+	.nav__right > * {
+		width: 100%;
+		text-align: center;
+	}
+
+	.toggle {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	.burger {
+		display: block;
+	}
+	.open div {
+		background-color: #05e286;
+		transition: 0.5s ease-in all;
+	}
+	.open div:first-child {
+		transform: rotate(45deg) translate(5px, 6px);
+	}
+	.open div:nth-child(2) {
+		opacity: 0;
+	}
+	.open div:last-child {
+		transform: rotate(-45deg) translate(5px, -6px);
 	}
 }
-
-@media (max-width: 670px) {
-	.nav__right {
-		flex: 3;
-	}
-} */

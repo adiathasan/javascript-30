@@ -6,6 +6,11 @@
 	border-bottom: 1px solid #393a3b;
 	padding: 0 2rem;
 	height: 10vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 100;
 }
 
 .nav__logo {
@@ -54,6 +59,10 @@
 }
 
 @media screen and (max-width: 600px) {
+	html,
+	body {
+		overflow-x: hidden;
+	}
 	.nav {
 		padding: 0 2rem;
 	}
@@ -65,7 +74,7 @@
 		top: 10vh;
 		flex-direction: column;
 		justify-content: space-evenly;
-		width: 50%;
+		width: 40%;
 		transform: translateX(100%);
 		opacity: 0;
 		transition: 0.5s ease-in all;
@@ -82,9 +91,14 @@
 	.burger {
 		display: block;
 	}
+
 	.open div {
 		background-color: #05e286;
 		transition: 0.5s ease-in all;
+	}
+	.nav__right > *:hover {
+		transform: translateY(-0.3rem);
+		box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.7);
 	}
 	.open div:first-child {
 		transform: rotate(45deg) translate(5px, 6px);

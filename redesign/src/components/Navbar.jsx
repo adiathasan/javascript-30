@@ -7,15 +7,39 @@ const Navbar = () => {
 		<div className='nav'>
 			<div className='nav__logo'>
 				<h1>
-					<a href='#home'>Color</a>
+					<a
+						onClick={() => {
+							setIsToggled(false);
+						}}
+						href='#home'>
+						Color
+					</a>
 				</h1>
 			</div>
 			<div className={`nav__right ${isToggled && 'toggle'}`}>
-				<a href='#home'>Home</a>
+				<a
+					onClick={() => {
+						setIsToggled(false);
+					}}
+					href='#home'>
+					Home
+				</a>
 
-				<a href='#about'>About</a>
+				<a
+					onClick={() => {
+						setIsToggled(false);
+					}}
+					href='#about'>
+					About
+				</a>
 
-				<a href='#services'>Services</a>
+				<a
+					onClick={() => {
+						setIsToggled(false);
+					}}
+					href='#services'>
+					Services
+				</a>
 			</div>
 			<div
 				className={`burger ${isToggled && 'open'}`}

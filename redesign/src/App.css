@@ -1,3 +1,8 @@
 .app {
-	/* padding: 0 4rem; */
+	padding: 0 2rem;
+}
+
+.app__container {
+	max-width: 1100px;
+	margin: 5rem auto 0 auto;
 }

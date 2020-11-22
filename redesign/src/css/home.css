@@ -1,12 +1,84 @@
-#wheel {
-	animation: wheel 0.5s ease-in 0 infinite;
+.home {
 }
 
-@keyframes wheel {
-	from {
-		transform: translateZ(0deg);
-	}
-	to {
-		transform: translateZ(360deg);
-	}
+.home__grid {
+	/* display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.home__grid > * {
+	width: 300px;
+	max-width: 100%;
+	cursor: pointer;
+	padding: 2rem;
+	border-radius: 10px;
+	background-color: #323232;
+	box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+	transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.home__grid > *:hover {
+	transform: translateY(-3px);
+}
+
+/* intersection ovserver */
+
+.home__inter {
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.left {
+	position: relative;
+	width: 400px;
+	max-width: 100%;
+}
+
+.left p {
+	position: absolute;
+	top: 80px;
+	right: -100px;
+	padding: 1rem;
+	border-radius: 10px;
+	background-color: white;
+	color: black;
+}
+
+.yellow {
+	width: 400px;
+	object-fit: contain;
+}
+
+.squig {
+	width: 100px;
+	object-fit: contain;
+	position: absolute;
+	bottom: 100px;
+	left: -50px;
+}
+
+.right {
+	width: 350px;
+	max-width: 100%;
+	cursor: pointer;
+	padding: 2rem;
+	border-radius: 10px;
+	background-color: #323232;
+	box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+	transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.right h2 {
+	margin-bottom: 0.5rem;
 }

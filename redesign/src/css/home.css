@@ -31,7 +31,7 @@
 /* intersection ovserver */
 
 .home__inter {
-	margin-top: 2rem;
+	margin-top: 3rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
@@ -57,6 +57,7 @@
 
 .yellow {
 	width: 400px;
+	max-width: 100%;
 	object-fit: contain;
 }
 
@@ -74,11 +75,26 @@
 	cursor: pointer;
 	padding: 2rem;
 	border-radius: 10px;
-	background-color: #323232;
+	background-color: #32323205;
 	box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
 	transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .right h2 {
 	margin-bottom: 0.5rem;
+}
+
+.anim {
+	opacity: 0;
+}
+
+@keyframes anim1 {
+	from {
+		opacity: 0;
+		transform: translateY(-70px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

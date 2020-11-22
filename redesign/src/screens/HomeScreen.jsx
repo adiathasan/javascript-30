@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../css/home.css';
 
 const HomeScreen = () => {
+	useEffect(() => {
+		const docs = document.querySelectorAll('.anim');
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				const isActive = entry.intersectionRatio > 0;
+				if (isActive) {
+					entry.target.style.animation = `anim1 ${entry.target.dataset.delay} forwards ease-out`;
+				} else {
+					entry.target.style.animation = 'none';
+				}
+			});
+		});
+		docs.forEach((doc) => {
+			observer.observe(doc);
+		});
+	});
+
 	return (
 		<div className='home'>
 			{/* <div className='home__parallex'>

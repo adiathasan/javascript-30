@@ -87,20 +87,20 @@ const HomeScreen = () => {
 						src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/yellow.jpg'
 						alt='yellow'
 						className='yellow anim'
-						data-delay='0s'
+						data-delay='.1s'
 					/>
-					<p className='anim' data-delay='.5s'>
+					<p className='anim' data-delay='.7s'>
 						I have no clue what I'm doing here LOL!
 					</p>
 					<img
 						src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/squiggly.svg'
 						alt='squig'
 						className='squig anim'
-						data-delay='.7s'
+						data-delay='.9s'
 					/>
 				</div>
-				<div className='right'>
-					<div className='anim' data-delay='1s'>
+				<div className='right anim' data-delay='1.2s'>
+					<div>
 						<h2>Get Yellow</h2>
 						<p>
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

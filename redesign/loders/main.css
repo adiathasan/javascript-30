@@ -1,0 +1,165 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 1100px;
+	margin: 200px auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+/*  spinner */
+
+.spinner {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	animation: spinner 1s linear infinite;
+}
+
+.spinner div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 9px solid transparent;
+	border-top-color: #b108ff;
+	border-radius: 50%;
+}
+
+.spinner div:first-child {
+	animation: spinner_1 1s linear infinite;
+}
+.spinner div:last-child {
+	transform: rotateZ(180deg);
+	animation: spinner_2 1s linear infinite;
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	50% {
+		transform: rotateZ(180deg);
+	}
+
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes spinner_1 {
+	0% {
+		border-width: 9px;
+	}
+
+	50% {
+		border-width: 2px;
+	}
+
+	100% {
+		border-width: 9px;
+	}
+}
+
+@keyframes spinner_2 {
+	0% {
+		border-width: 2px;
+	}
+
+	50% {
+		border-width: 9px;
+	}
+
+	100% {
+		border-width: 2px;
+	}
+}
+
+/*  bouncing ball */
+
+.bouncer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+	width: 100px;
+	height: 100px;
+}
+
+.bouncer div {
+	background-color: #0374c0;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	animation: bouncer 0.5s cubic-bezier(0.92, 0.05, 1, 1) infinite alternate;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.bouncer div:nth-child(2) {
+	animation-delay: 0.1s;
+	opacity: 0.8;
+}
+.bouncer div:nth-child(3) {
+	animation-delay: 0.3s;
+	opacity: 0.7;
+}
+.bouncer div:nth-child(4) {
+	animation-delay: 0.5s;
+	opacity: 0.6;
+}
+
+@keyframes bouncer {
+	from {
+		transform: translateY(-40px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+/*  flipping squares */
+
+.squares {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	perspective: 200px;
+}
+
+.squares div {
+	position: absolute;
+	top: 0;
+	height: 50px;
+	width: 50px;
+	background-color: coral;
+	animation: flip 3s linear infinite;
+	border-bottom: 1px solid black;
+	transform-origin: right bottom;
+}
+
+.squares div:last-child {
+	animation-delay: 1.5s;
+}
+
+@keyframes flip {
+	0% {
+		transform: rotateX(0) rotateY(0);
+	}
+	25% {
+		transform: rotateX(0) rotateY(180deg);
+	}
+	50% {
+		transform: rotateX(180deg) rotateY(180deg);
+	}
+
+	75% {
+		transform: rotateX(180deg) rotateY(0deg);
+	}
+	100% {
+		transform: rotateX(0) rotateY(0);
+	}
+}

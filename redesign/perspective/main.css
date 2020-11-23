@@ -13,7 +13,6 @@ ul {
 
 body {
 	overflow-x: hidden;
-	height: 100%;
 	background-color: white;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -50,12 +49,36 @@ body {
 }
 
 #left {
+	position: relative;
 	max-width: 600px;
 	padding: 1rem;
-	background-color: #003950;
+	background-color: #06aeccf3;
 	border-radius: 10px;
 	box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
-	color: #bfebff;
+	color: #010c11;
+	clip-path: circle(17.7% at 99% 4%);
+	cursor: pointer;
+	transition: 0.6s ease-in all;
+}
+
+#left:hover {
+	clip-path: circle(135.4% at 96% 4%);
+}
+
+#left:hover .info {
+	opacity: 0;
+}
+
+.info {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	padding: 0.5rem 1.3rem;
+	border-radius: 50px;
+	background-color: rgb(0, 52, 95);
+	transition: 0.4s ease-in all;
+	font-size: 1.5rem;
+	color: white;
 }
 
 #left h1 {
@@ -83,7 +106,7 @@ body {
 }
 
 #right li:hover {
-	transform: rotateY(-25deg) rotateX(8deg) scale(1.04);
+	transform: rotateY(-25deg) rotateX(20deg) scale(1.04);
 	z-index: 100;
 	mix-blend-mode: normal;
 }
@@ -103,4 +126,12 @@ body {
 #right li img {
 	width: 70px;
 	max-height: 100px;
+}
+
+@media (max-width: 864px) {
+	.container {
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
 }

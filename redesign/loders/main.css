@@ -127,7 +127,7 @@ body {
 	width: 100px;
 	height: 100px;
 	position: relative;
-	perspective: 200px;
+	perspective: 150px;
 }
 
 .squares div {
@@ -137,12 +137,13 @@ body {
 	width: 50px;
 	background-color: coral;
 	animation: flip 3s linear infinite;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #ff4805;
 	transform-origin: right bottom;
 }
 
 .squares div:last-child {
 	animation-delay: 1.5s;
+	opacity: 0.7;
 }
 
 @keyframes flip {

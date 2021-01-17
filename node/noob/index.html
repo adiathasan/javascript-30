@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+		<style>
+			body {
+				background-color: #222;
+				color: aliceblue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Hello World</h1>
+		<a href="/about">My shit</a>
+
+		<form action="/" method="POST">
+			<textarea type="text" name="any"> </textarea>
+			<button type="submit">Submit</button>
+		</form>
+
+		<script>
+			fetch('http://localhost:5000/api')
+				.then((res) => res.json())
+				.then((data) => console.log(data));
+		</script>
+	</body>
+</html>

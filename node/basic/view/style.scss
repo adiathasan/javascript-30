@@ -1,0 +1,155 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+$clr-dark: rgb(13, 17, 19);
+$clr-light: #fff;
+$clr-accent: rgb(222, 52, 0);
+$clr-accent-dark: rgb(163, 38, 0);
+$clr-secondary: rgb(16, 136, 248);
+
+body {
+	background: $clr-dark;
+	min-height: 97vh;
+	color: $clr-light;
+	display: grid;
+	place-items: center;
+}
+
+.game {
+	width: 400px;
+	height: 500px;
+	position: relative;
+	cursor: pointer;
+}
+
+.back {
+	transform: scale(0.9);
+	background-image: url(https://nerdiertides.files.wordpress.com/2016/07/watch-dogs-ubisoft-cover-art.jpg);
+	background-position: center;
+	background-size: 100%;
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+	border-radius: 1.5rem;
+	text-align: center;
+	position: relative;
+	transition: 0.3s ease-in-out all;
+	.musk {
+		position: absolute;
+		border-radius: 1.5rem;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(-180deg, #000000c2, #000);
+	}
+	.info {
+		margin-top: 14rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		text-align: center;
+
+		span {
+			display: block;
+		}
+	}
+	button {
+		background: $clr-secondary;
+		color: $clr-light;
+		cursor: pointer;
+		margin: 1rem auto;
+		padding: 0.7rem 1.4rem;
+		font-size: 1.1rem;
+		border-radius: 1rem;
+		border: none;
+		outline: none;
+	}
+	.streamers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		gap: 4rem;
+
+		div {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background: linear-gradient(90deg, #290000, #f50a0a, orange);
+		}
+	}
+}
+
+.front {
+	z-index: 3;
+	position: absolute;
+	width: 50%;
+	margin: 0 auto;
+	height: 50%;
+	top: 0;
+	left: 25%;
+	right: 25%;
+	transform: scale(0.9);
+	transition: 0.3s ease-in-out all;
+	img {
+		border-radius: 1.5rem;
+		width: 100%;
+	}
+
+	h2 {
+		margin: 0.5rem 0;
+	}
+	.stats {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.2rem;
+	}
+
+	p {
+		margin-top: 0.2rem;
+	}
+
+	.streamers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		div {
+			margin: 0 -0.3rem;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: linear-gradient(90deg, #290000, #f50a0a, orange);
+		}
+	}
+
+	&:hover {
+		top: -20%;
+		text-align: center;
+		transform: scale(1);
+
+		.stats {
+			p {
+				display: none;
+			}
+		}
+
+		.streamers {
+			display: none;
+		}
+
+		.back {
+			transform: scale(1);
+		}
+	}
+}

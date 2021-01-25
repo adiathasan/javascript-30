@@ -1,0 +1,186 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0d1113;
+  min-height: 97vh;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.game {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  cursor: pointer;
+}
+
+.back {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background-image: url(https://nerdiertides.files.wordpress.com/2016/07/watch-dogs-ubisoft-cover-art.jpg);
+  background-position: center;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  position: relative;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+}
+
+.back .musk {
+  position: absolute;
+  border-radius: 1.5rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000c2), to(#000));
+  background: linear-gradient(-180deg, #000000c2, #000);
+}
+
+.back .info {
+  margin-top: 14rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.back .info span {
+  display: block;
+}
+
+.back button {
+  background: #1088f8;
+  color: #fff;
+  cursor: pointer;
+  margin: 1rem auto;
+  padding: 0.7rem 1.4rem;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+}
+
+.back .streamers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4rem;
+}
+
+.back .streamers div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, right top, from(#290000), color-stop(#f50a0a), to(orange));
+  background: linear-gradient(90deg, #290000, #f50a0a, orange);
+}
+
+.front {
+  z-index: 3;
+  position: absolute;
+  width: 50%;
+  margin: 0 auto;
+  height: 50%;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+}
+
+.front img {
+  border-radius: 1.5rem;
+  width: 100%;
+}
+
+.front h2 {
+  margin: 0.5rem 0;
+}
+
+.front .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.2rem;
+}
+
+.front p {
+  margin-top: 0.2rem;
+}
+
+.front .streamers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.front .streamers div {
+  margin: 0 -0.3rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, right top, from(#290000), color-stop(#f50a0a), to(orange));
+  background: linear-gradient(90deg, #290000, #f50a0a, orange);
+}
+
+.front:hover {
+  top: -20%;
+  text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.front:hover .stats p {
+  display: none;
+}
+
+.front:hover .streamers {
+  display: none;
+}
+
+.front:hover .back {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+/*# sourceMappingURL=style.css.map */

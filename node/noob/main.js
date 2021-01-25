@@ -1,25 +1,9 @@
 const fs = require('fs');
 
 const http = require('http');
+const { getInfo } = require('./controller/controller');
 
-const EventEmitter = require('events');
-
-// const { Alarm } = require('./shit');
-
-// const alarm = new Alarm();
-
-// alarm.on('alarm', () => {
-// });
-
-// alarm.handleAlarm();
-
-// const stream = fs.createReadStream(`${__dirname}/b.txt`, 'utf8');
-
-// stream.on('data', (chunk) => {
-// 	console.log(' chunk ');
-// });
-
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
 	if (req.method === 'POST') {
 		req.on('data', (chunk) => {
 			console.log(chunk.toString().split('+').slice(1).join(' '));
@@ -29,6 +13,7 @@ const server = http.createServer((req, res) => {
 	} else {
 		switch (req.url) {
 			case '/':
+				res.statusCode = 200;
 				res.write(fs.readFileSync('index.html'));
 
 				break;
@@ -40,6 +25,10 @@ const server = http.createServer((req, res) => {
 				res.write(JSON.stringify({ name: 'adiat' }));
 
 				break;
+			case '/api/info':
+				await getInfo(req, res);
+
+				break;
 
 			default:
 				break;
@@ -49,14 +38,4 @@ const server = http.createServer((req, res) => {
 	res.end();
 });
 
-const emitter = new EventEmitter();
-
-emitter.on('timeout', (letter) => {
-	console.log(letter);
-});
-
 server.listen(5000);
-
-setTimeout(() => {
-	emitter.emit('timeout', 'I love You');
-}, 6000);
